@@ -1,3 +1,4 @@
 # BhuvanSA.github.io
-My website
-Work In Progress
+This is my Website!
+
+Used particles.js for background animations

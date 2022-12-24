@@ -24,13 +24,24 @@ li{list-style:none}
    ========================================================================== */
 h1
 {
-	color: black;
+	color: white;
 	text-align: center;
-	background: #dfdfdf
+	background: f
 }
 
 
 
+.ownpadding-right
+{
+
+	padding-right: 100px;
+}
+
+.ownpadding-left
+{
+
+	padding-left: 100px;
+}
 
 
 
