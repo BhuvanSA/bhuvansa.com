@@ -1,0 +1,32 @@
+HIVE Commands
+Step 1) Go to home/hadoop and open the terminal from this directory.
+Step 2) Start hadoop daemons.
+Step 3) After all daemons up, type hive and hit enter from home/hadoop.
+Step 4) Set mapreduce.framework.name=local;
+Step 5) Set hive.cli.print.header=true // execute this within hive.//
+Step 6) show databases;
+Step 7) use database <databasename>
+Step 8) show tables;
+create table order_products (order_id int,product_id int, item_id int, quantity int, list_price decimal(10,2),
+discount decimal (10,2)) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',';
+create table orders (order_id int,customer_id int, order_status int, order_date date,required_date
+date,shipped_date date, store_id int,staff_id int) ROW FORMAT DELIMITED FIELDS TERMINATED BY
+',' ;
+create table orders (customer_id int, order_status int, order_date date,required_date date,shipped_date date,
+store_id int,staff_id int) PARTITIONED BY (order_id int) ROW FORMAT DELIMITED FIELDS
+TERMINATED BY ',';
+Dept. of AI & ML, GAT Prepared by: Prof. Lakshmikantha G C
+create table orders (order_id int, customer_id int, order_status int, order_date date,required_date
+date,shipped_date date, store_id int,staff_id int) PARTITIONED BY (year int) ROW FORMAT DELIMITED
+FIELDS TERMINATED BY ',';
+create table orders (order_id int, customer_id int, order_status int, order_date date,required_date
+date,shipped_date date, store_id int,staff_id int) PARTITIONED BY (year int) CLUSTERED BY (order_id)
+INTO 4 BUCKETS ROW FORMAT DELIMITED FIELDS TERMINATED BY ',';
+hive> load data local inpath '/home/vijay/hadoop/order_products.csv' into table order_products;
+hive> load data local inpath '/home/vijay/hadoop/orders.csv' into table orders;
+hive> select a.customer_id, sum(b.list_price * b.quantity) from orders a, order_products b where a.order_id =
+b.order_id GROUP BY a.customer_id;
+hive> describe FORMATTED orders;
+create table customers (id int,first_name varchar(25),last_name varchar(25),gender varchar(1),age
+int,customer_since date) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',';
+Dept. of AI & ML, GAT Prepared by: Prof. Lakshmikantha G C

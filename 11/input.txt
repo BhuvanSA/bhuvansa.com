@@ -1,0 +1,45 @@
+PROGRAM 13
+Install Apache Spark (single and multi-node cluster) and learn to use basic commands and RDD
+creation and Implement SVM, Regression, classification etc. using Spark MLib.
+Write and Execute word count program using spark shell.
+Step 1. Install scala
+$sudo apt install scala
+Step 2. Check the version of scala
+$scala -version
+Step 3. Install python3·pip
+$sudo apt install python3·pip
+Step 4. Install pyspark
+$pip install pyspark
+Step 5. Download spark 3.3.1bin hadoop3.tgz from apache website
+$sudo wget https://dlcdn.apache.org/spark/spark·3.3.1/spark 3.3.1bin hadoop3.tgz
+Step 6. Unzip downloaded file
+$sudo tar xvf spark-3.3.1bin-hadoop3.tgz
+Step 7. Create a spark directory and move the content of the extracted file
+$cd spark·3.3.1 bin/hadoop3
+$sudo mv * /usr/local/spark
+Step 8. Update bashrc and refresh it by using source command
+$sudo nano -/.bashrc
+#SPARK Variables
+export PARK_HOME=/usr/local/spark export PATH=$PATH:SSPARK_HOME/bin export
+PATH=$PATH:SSPARK_HOME/sbin
+#SPARK Variables END
+$source -/.bashrc
+Dept. of AI & ML, GAT Prepared by: Prof. Lakshmikantha G C
+Step 2. Spark is ready to use, start spark-shell
+$spark-shell
+To stop shells for-all (ctrl+D)
+$pyspark
+Write and Execute word count program using spark shell.
+Steps are used to learn how to perform wordcount using spark.
+Step 1: Start the spark shell using the following command and wait for the prompt to appear
+$spark-shell
+Step 2: Create RDD from a file in HDFS, type the following on spark-shell, and press enter:
+$var linesRDD = sc.textFile("/data/mr/wordcount/input/big.txt")
+Step 3: Convert each record into word
+$var wordsRDD = linesRDD.flatMap(_.split(" "))
+Step 4: Convert each word into key-value pair
+$var wordsKvRdd = wordsRDD.map((_, 1))
+Step 5: Group By key and perform aggregation on each key:
+$var wordCounts = wordsKvRdd.reduceByKey(_ + _ )
+Step 6: Save the results into HDFS:
+$wordCounts.saveAsTextFile("my_spark_shell_wc_output")

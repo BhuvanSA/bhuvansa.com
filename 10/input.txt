@@ -1,0 +1,142 @@
+verify if Hadoop is installed.
+Step 2. Please verify if Java is installed.
+Step 3. Please download Pig 0.17.0 from the below link.
+On Linux: $wget https://downloads.apache.org/pig/pig-0.17.0/pig-0.17.0.tar.gz
+On Windows: https://downloads.apache.org/pig/pig-0.17.0/pig-0.17.0.tar.gz
+Step 4. Now we will extract the tar file by using the below command and rename the folder to pig to make
+it meaningful.
+$tar -xzf pig-0.17.0.tar.gz
+$mv pig-0.17.0 pig
+Step 5. Now edit the .bashrc file to update the environment variable of Apache Pig so that it can be
+accessed from any directory.
+$nano .bashrc
+Dept. of AI & ML, GAT Prepared by: Prof. Lakshmikantha G C
+Add below lines.
+export PIG_HOME=/home/cloudduggu/pig
+export PATH=$PATH:/home/cloudduggu/pig/bin
+export PIG_CLASSPATH=$HADOOP_HOME/etc/Hadoop
+Save the changes by pressing CTRL + O and exit from the nano editor by pressing CTRL + X.
+Step 6. Run source command to update changes in the same terminal.
+$source .bashrc
+Step 7. Now run the pig version command to make sure that Pig is installed properly.
+Step 8. Run pig help command to see all pig command options.
+Dept. of AI & ML, GAT Prepared by: Prof. Lakshmikantha G C
+Step 9. Now start Pig grunt shell (grunt shell is used to execute Pig Latin scripts).
+To start Pig Grunt type :
+$pig -x local
+It will start Pig Grunt shell:
+grunt>
+Dept. of AI & ML, GAT Prepared by: Prof. Lakshmikantha G C
+HDFS commands in Pig Grunt
+Let us see few HDFS commands from the Pig Grunt shell.
+fs -ls /
+This command will print all directories present in HDFS “/”.
+Syntax:
+grunt> fs subcommand subcommand_parameters;
+Command:
+grunt> fs -ls /
+fs -cat
+This command will print the content of a file present in HDFS.
+Syntax:
+grunt> fs subcommand subcommand_parameters
+Command:
+grunt> fs -cat /hive/warehouse/kv2.txt
+Output:
+Dept. of AI & ML, GAT Prepared by: Prof. Lakshmikantha G C
+fs -mkdir
+This command will create a directory in HDFS.
+Syntax:
+grunt> fs subcommand subcommand_parameters
+Command:
+grunt> fs -mkdir /pigdata
+Output:
+fs -copyFromLocal
+This command will copy a file from the local system to HDFS.
+Syntax:
+grunt> fs subcommand subcommand_parameters
+Command:
+grunt> fs -copyFromLocal /home/cloudduggu/pig/tutorial/emp.txt /pigdata/
+Output:
+Dept. of AI & ML, GAT Prepared by: Prof. Lakshmikantha G C
+Shell commands in Pig Grunt
+We can use the Pig Grunt shell to run the basic shell command. We can invoke any shell commands using
+sh.
+Let us see few Shell commands from the Pig Grunt shell. We cannot execute those commands which are
+part of the shell environment such as –cd.
+sh ls
+This command will list all directories/files.
+Syntax:
+grunt> sh subcommand subcommand_parameters
+Command:
+grunt> sh ls
+sh cat
+This command will print the content of a file.
+Syntax:
+grunt> sh subcommand subcommand_parameters
+Command:
+grunt> sh cat
+Dept. of AI & ML, GAT Prepared by: Prof. Lakshmikantha G C
+Output:
+Clear Command
+Clear command is used to clear the screen of the Grunt shell.
+Syntax:
+grunt> Clear
+Command:
+grunt> Clear
+History Command
+The history command is used to clear the screen of the Grunt shell.
+Syntax:
+grunt> history
+Command:
+grunt> history
+Output:
+Dept. of AI & ML, GAT Prepared by: Prof. Lakshmikantha G C
+Set Command
+The SET command is used to assign values to keys that are case sensitive. In case the SET command is
+used without providing arguments then all other system properties and configurations are printed.
+Syntax:
+grunt> set [key 'value']
+Command:
+grunt> SET debug 'on'
+grunt> SET job.name 'my job'
+grunt> SET default_parallel 100
+EXEC Command
+Exec command is used to execute Pig script from Grunt shell.
+Please make sure the history server is running. You can verify in the JPS command output. This service
+“JobHistoryServer” should be running otherwise you can start it using the below command.
+$ /home/cloudduggu/hadoop/sbin$./mr-jobhistory-daemon.sh start historyserver
+Let us assume that we have a file name “emp.txt” which is present on HDFS /pigdata/ directory. Now we
+want to use this file and project its content using Pig script.
+Content of “emp.txt”:
+201,Wick,Google
+203,John,Facebook
+204,Partick,Instagram
+205,Hema,Google
+206,Holi,Facebook
+207,Michael,Instagram
+208,Michael,Instagram
+209,Chung,Instagram
+210,Anna,Instagram
+Dept. of AI & ML, GAT Prepared by: Prof. Lakshmikantha G C
+Now we will create an “emp_script.pig” script file which will have the below statements to process data
+and put this file on the same location of HDFS that is /pigdata/.
+Content of “emp_script.pig”:
+employee = LOAD 'hdfs://localhost:9000/pigdata/emp.txt' USING PigStorage(',')
+as (empid:int,empname:chararray,salary:int);
+dump employee;
+Now we will start the Pig Grunt shell and run the script.
+Syntax:
+grunt> exec [–param param_name = param_value] [–param_file file_name] [script]
+Command:
+$pig
+grunt> exec hdfs:///pigdata/emp_script.pig
+Kill Command
+The kill command will attempt to kill any MapReduce jobs associated with the Pig job
+Syntax:
+grunt> kill JobId
+Command:
+grunt> kill job_500
+Syntax:
+grunt> run [–param param_name = param_value] [–param_file file_name] script
+Command:
+grunt> run hd

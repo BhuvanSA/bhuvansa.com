@@ -1,0 +1,54 @@
+MongoDB Commands
+Create Database
+Step 1: Open MongoDB compass, connect to the localhost of the device.
+Step 2: Open terminal and enter mongod and mongo cpmmands.
+Step 3: show dbs (Use the show dbs command to check the list of databases that are already present in
+MongoDB.)
+Step 4: The use database name command is used to create a database in MongoDB. If the database is
+already created then it will switch to that database otherwise it will create a new database.
+use mongodb_test
+Step 5: If we run the show dbs command then newly database will not appear because there is no
+document present in that. So to display the database name we have to insert at least one document in the
+database using the below command.
+> db.course.insert({"course_name":"cloudduggu mongodb tutorial"})
+> show dbs
+Dept. of AI & ML, GAT Prepared by: Prof. Lakshmikantha G C
+Step 6: drop Database() method
+The dropDatabase() command is used to drop a selected database.
+>db.dropdatabase()
+We will use the use mongodb_test command to select the newest created database and then we will run
+the db.dropDatabase() command to drop the database.
+> use mongodb_test
+> show dbs
+> db.dropdatabase()
+➢ MongoDB insert Methods:
+In MongoDB, there is the following Insert() Method which is used to insert the documents in the
+collection.
+• db.collection.insertOne()
+• db.collection.insertMany()
+• db.collection.insert()
+1)db.collection.insertOne()
+➢ The insertOne() method is used to insert a single document in the collection. In case the collection
+does not exist then MongoDB Insert methods will create one.
+> db.item_inventory.insertOne(
+{ item_name: "canvas", item_quantity: 115, item_tags: ["cotton"], item_size: { height: 29, weight:
+36.5, uom: "cm" } }
+)
+2) db.collection.insertMany()
+➢ The insertMany() method is used to insert many Documents in the Collection.
+> db.item_inventory.insertMany(
+[ { item_name: "journal", item_quantity: 25, item_tags: ["blank", "red"], item_size: { height: 14, weight
+: 21, uom: "cm" } },
+Dept. of AI & ML, GAT Prepared by: Prof. Lakshmikantha G C
+{ item_name: "mat", item_quantity: 85, item_tags: ["gray"], item_size: { height: 27.9, weight: 35.5, uo
+m: "cm" } },
+{ item_name: "laptop", item_quantity: 100, item_tags: ["black"], item_size: { height: 10, weight: 2, uom: "
+cm" } },
+{ item_name: "mouse", item_quantity: 110, item_tags: ["white"], item_size: { height: 3, weight: 4, uom: "c
+m" } },
+{ item_name: "mousepad", item_quantity: 25, item_tags: ["gel", "blue"], item_size: { height: 19, weight: 2
+2.85, uom: "cm" } }
+] )
+3) db.collection.insert()
+➢ The insert() method is used to insert a Document or multiple Documents in the Collection.
+> db.products_detail.insert( { item_name: "box", item_quantity: 100 } )
