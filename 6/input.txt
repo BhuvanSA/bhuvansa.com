@@ -1,4 +1,0 @@
-doc1 apple banana 
-doc2 banana orange 
-doc3 apple mango 
-doc4 banana apple
