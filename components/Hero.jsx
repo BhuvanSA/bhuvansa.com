@@ -41,9 +41,16 @@ const Hero = () => {
                 My Resume <Download size={18} />
               </Button>
             </div>
+            {/* socials */}
+            <Socials
+              containerStyles="gap-x-6 mx-auto xl:mx-0 flex"
+              iconsStyles="text-foreground text-[22px] hover:text-primary transition-all"
+            />
           </div>
           {/* image */}
-          <div className="hidden xl:flex relative">image</div>
+          <div className="hidden xl:flex relative">
+            <div className="bg-hero_shape2-light dark:bg-hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2"></div>
+          </div>
         </div>
         {/* icon */}
         <div className="hidden md:flex absolute left-2/4 bottom-44 xl:bottom-12 animate-bounce">
