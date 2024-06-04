@@ -16,21 +16,21 @@ import Socials from "./Socials";
 
 const Hero = () => {
   return (
-    <section className="py-12 xl:py-24 h-[84vh] xl:pt-28 bg-hero bg-no-repeat bg-bottom bg-cover dark:bg-none ">
+    <section className="h-[84vh] bg-hero bg-cover bg-bottom bg-no-repeat py-12 dark:bg-none xl:py-24 xl:pt-28">
       <div className="container mx-auto">
         <div className="flex justify-between gap-x-8">
           {/* text */}
-          <div className="flex max-w-[600px] flex-col justify-center mx-auto xl:mx-0 text-center xl:text-left">
-            <di className="text-sm uppercase font-semibold mb-4 text-primary tracking-[4px]">
+          <div className="mx-auto flex max-w-[600px] flex-col justify-center text-center xl:mx-0 xl:text-left">
+            <di className="mb-4 text-sm font-semibold uppercase tracking-[4px] text-primary">
               Web Developer
             </di>
             <h1 className="h1">Hello, my name is Bhuvan S A</h1>
-            <p className="subtitle max-w-[490px] mx-auto xl:mx-0">
+            <p className="subtitle mx-auto max-w-[490px] xl:mx-0">
               Breif descripttion with insights into myself, my vocational
               journey, and what I engage in professionally.k
             </p>
             {/* buttons */}
-            <div className="flex flex-col gap-y-3 md:flex-row gap-x-3 mx-auto xl:mx-0 mb-12 ">
+            <div className="mx-auto mb-12 flex flex-col gap-x-3 gap-y-3 md:flex-row xl:mx-0">
               <Link href="/contact">
                 <Button className="gap-x-2">
                   Contact Me
@@ -48,12 +48,12 @@ const Hero = () => {
             />
           </div>
           {/* image */}
-          <div className="hidden xl:flex relative">
-            <div className="bg-hero_shape2-light dark:bg-hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2"></div>
+          <div className="relative hidden xl:flex">
+            <div className="bg-hero_shape2-light absolute -right-2 -top-1 h-[500px] w-[500px] bg-no-repeat dark:bg-hero_shape2_dark"></div>
           </div>
         </div>
         {/* icon */}
-        <div className="hidden md:flex absolute left-2/4 bottom-44 xl:bottom-12 animate-bounce">
+        <div className="absolute bottom-44 left-2/4 hidden animate-bounce md:flex xl:bottom-12">
           <RiArrowDownSLine className="text-3xl text-primary" />
         </div>
       </div>

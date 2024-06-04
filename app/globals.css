@@ -63,9 +63,9 @@
 }
 
 .h1 {
-  @apply text-6xl xl:text-[72px] xl:leading-[80px] tracking-[-2px] font-bold;
+  @apply text-6xl font-bold tracking-[-2px] xl:text-[72px] xl:leading-[80px];
 }
 
 .subtitle {
-  @apply text-muted-foreground text-lg mb-8 font-light;
+  @apply mb-8 text-lg font-light text-muted-foreground;
 }
