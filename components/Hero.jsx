@@ -3,10 +3,10 @@ import { Button } from "./ui/button";
 import { Download, Send } from "lucide-react";
 
 import {
-  RiBriefcase4fill,
   RiTeamFill,
   RiTodoFill,
   RiArrowDownSLine,
+  RiBriefcase4Fill,
 } from "react-icons/ri";
 
 // components
@@ -49,7 +49,34 @@ const Hero = () => {
           </div>
           {/* image */}
           <div className="relative hidden xl:flex">
+            {/* badge 1 */}
+            <Badge
+              containerStyles="absolute top-[24%] -left-[5rem]"
+              icon={<RiBriefcase4Fill />}
+              endCountNum={4}
+              badgeText="Years Of Experience"
+            />
+            {/* badge 2 */}
+            <Badge
+              containerStyles="absolute top-[80%] -left-[1rem]"
+              icon={<RiTodoFill />}
+              endCountNum={4}
+              // endCountText="k"
+              badgeText="Finished Projects"
+            />
+            {/* badge 3 */}
+            <Badge
+              containerStyles="absolute top-[55%] -right-10"
+              icon={<RiTeamFill />}
+              endCountNum={4}
+              // endCountText="k"
+              badgeText="Happy Clients"
+            />
             <div className="bg-hero_shape2-light absolute -right-2 -top-1 h-[500px] w-[500px] bg-no-repeat dark:bg-hero_shape2_dark"></div>
+            <DevImg
+              containerStyles="bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom"
+              imgSrc="/hero/developer.png"
+            />
           </div>
         </div>
         {/* icon */}
