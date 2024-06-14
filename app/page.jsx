@@ -1,5 +1,7 @@
 import About from "@/components/About";
 import Hero from "@/components/Hero";
+import Work from "@/components/Work";
+import Services from "@/components/ui/Services";
 import Image from "next/image";
 
 export default function Home() {
@@ -7,6 +9,8 @@ export default function Home() {
     <main>
       <Hero />
       <About />
+      <Services />
+      <Work />
     </main>
   );
 }
