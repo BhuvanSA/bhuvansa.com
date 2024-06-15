@@ -91,6 +91,9 @@ module.exports = {
         contact_illustration_light: "url(/contact/illustration-light.svg)",
         contact_illustration_dark: "url(/contact/illustration-dark.svg)",
       },
+      cursor: {
+        grab: "grab",
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],

@@ -13,6 +13,7 @@ import {
 import DevImg from "./DevImg";
 import Badge from "./Badge";
 import Socials from "./Socials";
+import Roles from "./Roles";
 
 const Hero = () => {
   return (
@@ -20,13 +21,11 @@ const Hero = () => {
       <div className="container mx-auto">
         <div className="flex justify-between gap-x-8">
           {/* text */}
-          <div className="mx-auto flex max-w-[600px] flex-col justify-center text-center xl:mx-0 xl:text-left">
-            <div className="mb-4 text-sm font-semibold uppercase tracking-[4px] text-primary">
-              Full Stack Developer
+          <div className="mx-auto flex max-w-[300px] flex-col justify-center text-center xl:mx-0 xl:text-left">
+            <div className="mb-4 cursor-grab text-sm font-semibold uppercase tracking-[4px] text-primary">
+              <Roles />
             </div>
-            <h1 className="h1">
-              Hello, I'm <div>Bhuvan S A</div>
-            </h1>
+            <h1 className="h1">Hello, I'm Bhuvan</h1>
             <p className="subtitle mx-auto max-w-[490px] xl:mx-0">
               Nice to meet you
             </p>
@@ -38,9 +37,11 @@ const Hero = () => {
                   <Send size={18} />
                 </Button>
               </Link>
-              <Button variant="secondary" className="gap-x-2">
-                My Resume <Download size={18} />
-              </Button>
+              <a href="/hero/BhuvanSA.pdf" download>
+                <Button variant="secondary" className="gap-x-2">
+                  My Resume <Download size={18} />
+                </Button>
+              </a>
             </div>
             {/* socials */}
             <Socials
@@ -54,14 +55,14 @@ const Hero = () => {
             <Badge
               containerStyles="absolute top-[24%] -left-[5rem]"
               icon={<RiBriefcase4Fill />}
-              endCountNum={4}
-              badgeText="Years Of Experience"
+              endCountNum={2}
+              badgeText="Internships Completed"
             />
             {/* badge 2 */}
             <Badge
               containerStyles="absolute top-[80%] -left-[1rem]"
               icon={<RiTodoFill />}
-              endCountNum={4}
+              endCountNum={6}
               // endCountText="k"
               badgeText="Finished Projects"
             />
@@ -71,7 +72,7 @@ const Hero = () => {
               icon={<RiTeamFill />}
               endCountNum={4}
               // endCountText="k"
-              badgeText="Happy Clients"
+              badgeText="Hackathons Won"
             />
             <div className="bg-hero_shape2-light absolute -right-2 -top-1 h-[500px] w-[500px] bg-no-repeat dark:bg-hero_shape2_dark"></div>
             <DevImg
