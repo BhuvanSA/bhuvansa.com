@@ -21,13 +21,14 @@ const Hero = () => {
         <div className="flex justify-between gap-x-8">
           {/* text */}
           <div className="mx-auto flex max-w-[600px] flex-col justify-center text-center xl:mx-0 xl:text-left">
-            <di className="mb-4 text-sm font-semibold uppercase tracking-[4px] text-primary">
-              Web Developer
-            </di>
-            <h1 className="h1">Hello, my name is Bhuvan S A</h1>
+            <div className="mb-4 text-sm font-semibold uppercase tracking-[4px] text-primary">
+              Full Stack Developer
+            </div>
+            <h1 className="h1">
+              Hello, I'm <div>Bhuvan S A</div>
+            </h1>
             <p className="subtitle mx-auto max-w-[490px] xl:mx-0">
-              Breif descripttion with insights into myself, my vocational
-              journey, and what I engage in professionally.k
+              Nice to meet you
             </p>
             {/* buttons */}
             <div className="mx-auto mb-12 flex flex-col gap-x-3 gap-y-3 md:flex-row xl:mx-0">
