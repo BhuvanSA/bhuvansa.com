@@ -89,3 +89,10 @@
 .badge {
   @apply z-10 flex h-[68px] w-[200px] items-center gap-x-4 rounded-[10px] bg-white p-4 shadow-2xl dark:backdrop-blur-[44px];
 }
+
+/* swiper bullets styles */
+.swiper-horizontal > .section-pagnation-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  @apply bg-primary;
+}
