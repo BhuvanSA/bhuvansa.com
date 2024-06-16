@@ -14,45 +14,43 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 
 // components
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "@/components/ProjectCard";
 
 const projectData = [
   {
-    image: "/work/3.png",
-    category: "react js",
-    name: "Nexa Website",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, quos. repellant.",
-    link: "/",
-    github: "/",
+    image: "/work/1.png",
+    category: "Web App",
+    name: "Flask Feedback Form",
+    description: "A form to collect feedbacks for multiple teams!",
+    link: "https://flaskfeedbackform.bhuvansa.com",
+    github: "https://github.com/BhuvanSA/flask-feedback-form",
   },
   {
     image: "/work/2.png",
-    category: "react js",
-    name: "Nexa Website",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, quos. repellant.",
-    link: "/",
-    github: "/",
+    category: "Web App",
+    name: "Ideathon Landing Page",
+    description: "A landing page for an Ideathon event!",
+    link: "https://ideathon.bhuvansa.com",
+    github: "https://github.com/BhuvanSA/ideathon-landingpage",
   },
-  {
-    image: "/work/1.png",
-    category: "next js",
-    name: "Nexa Website",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, quos. repellant.",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/1.png",
-    category: "next js",
-    name: "Nexa Website",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, quos. repellant.",
-    link: "/",
-    github: "/",
-  },
+  // {
+  //   image: "/work/1.png",
+  //   category: "next js",
+  //   name: "Nexa Website",
+  //   description:
+  //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, quos. repellant.",
+  //   link: "/",
+  //   github: "/",
+  // },
+  // {
+  //   image: "/work/1.png",
+  //   category: "next js",
+  //   name: "Nexa Website",
+  //   description:
+  //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, quos. repellant.",
+  //   link: "/",
+  //   github: "/",
+  // },
 ];
 
 const Work = () => {
@@ -63,10 +61,7 @@ const Work = () => {
         <div className="mx-auto mb-12 flex max-w-[400px] flex-col items-center justify-center text-center xl:mx-0 xl:h-[400px] xl:items-start xl:text-left">
           <h2 className="section-title mb-4">Latest Projects</h2>
           <p className="subtitle mb-8">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
-            cupiditate obcaecati, eligendi consequatur dignissimos quos, nemo
-            modi ipsam nisi quis, autem accusamus veniam. Esse, ullam id saepe
-            eius et sapiente.
+            Here are some of the projects I've worked on recently.
           </p>
           <Link href="/projects">
             <Button>All projects</Button>

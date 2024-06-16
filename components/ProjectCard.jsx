@@ -2,13 +2,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { Card, CardHeader } from "./ui/card";
 import { Github, Link2Icon } from "lucide-react";
-import Badge from "./Badge";
+import { Badge } from "./ui/Badge";
 
 const ProjectCard = ({ project }) => {
   return (
-    <Card className="group relative h-full overflow-hidden">
+    <Card className="group relative overflow-hidden">
       <CardHeader className="p-0">
-        {/* images */}
+        {/* image */}
         <div className="relative flex h-[300px] w-full items-center justify-center overflow-hidden bg-tertiary dark:bg-secondary/40 xl:bg-work_project_bg_light xl:bg-[110%] xl:bg-no-repeat xl:dark:bg-work_project_bg_dark">
           <Image
             className="absolute bottom-0 rounded-t-lg shadow-2xl"
@@ -38,7 +38,7 @@ const ProjectCard = ({ project }) => {
         </div>
       </CardHeader>
       <div className="h-full px-8 py-6">
-        <Badge containerStyles="uppercase text-sm font-medium mb-2 absolute top-4 left-5 ">
+        <Badge className="absolute left-5 top-4 mb-2 text-sm font-medium uppercase">
           {project.category}
         </Badge>
         <h4 className="h4 mb-1">{project.name}</h4>
