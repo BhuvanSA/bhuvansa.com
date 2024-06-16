@@ -6,12 +6,12 @@ import Badge from "./Badge";
 
 const ProjectCard = ({ project }) => {
   return (
-    <Card className="group relative overflow-hidden">
+    <Card className="group relative h-full overflow-hidden">
       <CardHeader className="p-0">
         {/* images */}
-        <div className="xl:dark:bg-work_project_bg_dark xl:bg-work_project_bg_light relative flex h-[300px] w-full items-center justify-center overflow-hidden bg-tertiary dark:bg-secondary/40 xl:bg-[110%] xl:bg-no-repeat">
+        <div className="relative flex h-[300px] w-full items-center justify-center overflow-hidden bg-tertiary dark:bg-secondary/40 xl:bg-work_project_bg_light xl:bg-[110%] xl:bg-no-repeat xl:dark:bg-work_project_bg_dark">
           <Image
-            className="absolute bottom-0 shadow-2xl"
+            className="absolute bottom-0 rounded-t-lg shadow-2xl"
             src={project.image}
             width={247}
             height={250}
@@ -22,12 +22,14 @@ const ProjectCard = ({ project }) => {
           <div className="flex gap-4">
             <Link
               href={project.link}
+              target="_blank"
               className="flex h-[54px] w-[54px] scale-0 items-center justify-center rounded-full bg-secondary opacity-0 transition-all duration-200 group-hover:scale-100 group-hover:opacity-100"
             >
               <Link2Icon className="text-white" />
             </Link>
             <Link
               href={project.github}
+              target_="_blank"
               className="flex h-[54px] w-[54px] scale-0 items-center justify-center rounded-full bg-secondary opacity-0 transition-all duration-300 group-hover:scale-100 group-hover:opacity-100"
             >
               <Github className="text-white" />

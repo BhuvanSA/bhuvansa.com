@@ -5,25 +5,23 @@ import ProjectCard from "@/components/ProjectCard";
 
 const projectData = [
   {
-    image: "/work/3.png",
-    category: "react js",
-    name: "Nexa Website",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, quos. repellant.",
-    link: "/",
-    github: "/",
+    image: "/work/1.png",
+    category: "Web App",
+    name: "Flask Feedback Form",
+    description: "A form to collect feedbacks for multiple teams!",
+    link: "https://flaskfeedbackform.bhuvansa.com",
+    github: "https://github.com/BhuvanSA/flask-feedback-form",
   },
   {
     image: "/work/2.png",
-    category: "react js",
-    name: "Nexa Website",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, quos. repellant.",
-    link: "/",
-    github: "/",
+    category: "Web App",
+    name: "Ideathon Landing Page",
+    description: "A landing page for an Ideathon event!",
+    link: "https://ideathon.bhuvansa.com",
+    github: "https://github.com/BhuvanSA/ideathon-landingpage",
   },
   {
-    image: "/work/1.png",
+    image: "/work/3.png",
     category: "next js",
     name: "Nexa Website",
     description:
@@ -32,7 +30,7 @@ const projectData = [
     github: "/",
   },
   {
-    image: "/work/1.png",
+    image: "/work/4.png",
     category: "next js",
     name: "Nexa Website",
     description:
