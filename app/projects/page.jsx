@@ -6,45 +6,29 @@ import ProjectCard from "@/components/ProjectCard";
 const projectData = [
   {
     image: "/work/1.png",
-    category: "Web App",
+    category: ["Full-Stack", "Backend", "PostgreSQL"],
     name: "Flask Feedback Form",
-    description: "A form to collect feedbacks for multiple teams!",
+    description: "A form to collect feedbacks for multiple teams.",
     link: "https://flaskfeedbackform.bhuvansa.com",
     github: "https://github.com/BhuvanSA/flask-feedback-form",
   },
   {
     image: "/work/2.png",
-    category: "Web App",
+    category: ["Frontend", "Tailwind CSS"],
     name: "Ideathon Landing Page",
-    description: "A landing page for an Ideathon event!",
+    description: "A landing page for an Ideathon event, hosted by my college.",
     link: "https://ideathon.bhuvansa.com",
     github: "https://github.com/BhuvanSA/ideathon-landingpage",
-  },
-  {
-    image: "/work/3.png",
-    category: "next js",
-    name: "Nexa Website",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, quos. repellant.",
-    link: "/",
-    github: "/",
-  },
-  {
-    image: "/work/4.png",
-    category: "next js",
-    name: "Nexa Website",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, quos. repellant.",
-    link: "/",
-    github: "/",
   },
 ];
 
 // remove category duplicates
 const uniqueCategory = [
   "all projects",
-  ...new Set(projectData.map((item) => item.category)),
+  // ...new Set(projectData.map((item) => item.category.)),
+  ...new Set(projectData.map((item) => item.category).flat(1)),
 ];
+// console.log(uniqueCategory);
 
 const Projects = () => {
   const [categories, setCategories] = useState(uniqueCategory);
@@ -52,7 +36,12 @@ const Projects = () => {
 
   const filteredProjects = projectData.filter((project) => {
     // if category is 'all projects' return all projects, else filter by category
-    return category === "all projects" ? project : project.category;
+    // return category === "all projects"
+    //   ? project
+    //   : project.category === category;
+    return category === "all projects"
+      ? project
+      : project.category.includes(category);
   });
 
   return (
@@ -67,7 +56,9 @@ const Projects = () => {
             {categories.map((category, index) => {
               return (
                 <TabsTrigger
-                  onclick={() => setCategory(category)}
+                  onClick={() => {
+                    setCategory(category);
+                  }}
                   value={category}
                   key={index}
                   className="w-[162px] capitalize md:w-auto"

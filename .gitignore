@@ -5,6 +5,11 @@
 /.pnp
 .pnp.js
 .yarn/install-state.gz
+.yarn/write-lock
+
+# package files
+package-lock.json
+
 
 # testing
 /coverage
