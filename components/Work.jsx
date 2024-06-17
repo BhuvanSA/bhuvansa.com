@@ -33,24 +33,6 @@ const projectData = [
     link: "https://ideathon.bhuvansa.com",
     github: "https://github.com/BhuvanSA/ideathon-landingpage",
   },
-  // {
-  //   image: "/work/1.png",
-  //   category: "next js",
-  //   name: "Nexa Website",
-  //   description:
-  //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, quos. repellant.",
-  //   link: "/",
-  //   github: "/",
-  // },
-  // {
-  //   image: "/work/1.png",
-  //   category: "next js",
-  //   name: "Nexa Website",
-  //   description:
-  //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, quos. repellant.",
-  //   link: "/",
-  //   github: "/",
-  // },
 ];
 
 const Work = () => {
