@@ -39,10 +39,10 @@ const Contact = () => {
               <div>Bengaluru, Karnataka</div>
             </div>
             {/* phone */}
-            <div className="flex items-center gap-x-8">
+            {/* <div className="flex items-center gap-x-8">
               <PhoneCall size={18} className="text-primary" />
               <div>bhuvansa@icloud.com</div>
-            </div>
+            </div> */}
           </div>
           <Form />
         </div>
