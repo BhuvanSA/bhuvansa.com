@@ -21,39 +21,24 @@ import { Pagination } from "swiper/modules";
 
 const reviewsData = [
   {
-    avatar: "/reviews/avatar-1.png",
-    name: "Richard Thompson",
-    job: "Chef",
+    avatar: "/reviews/giftolexia_logo.jpeg",
+    name: "Giftolexia Solutions Private Limited",
+    job: "Data Analyst and Full Stack Developer Intern",
     review:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, quos. repellant.",
+      "Bhuvan worked along with the Data Analytics team and made substantial contributions both at an individual level and at the team level. We appreciate his interest, perseverance and dedication throughout the project, and his contribution to Giftolexia. ...",
+    company_link: "https://giftolexia.com",
+    certificate_link:
+      "https://drive.google.com/file/d/1FbVPU1ZPk-N44kYldMuwZwCP6efEqAA4/view?usp=sharing",
   },
   {
-    avatar: "/reviews/avatar-1.png",
-    name: "Richard Thompson",
-    job: "Chef",
+    avatar: "/reviews/liaplus_logo.jpeg",
+    name: "LiaPlus AI",
+    job: "Full Stack Developer Intern",
     review:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, quos. repellant.",
-  },
-  {
-    avatar: "/reviews/avatar-1.png",
-    name: "Richard Thompson",
-    job: "Chef",
-    review:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, quos. repellant.",
-  },
-  {
-    avatar: "/reviews/avatar-1.png",
-    name: "Richard Thompson",
-    job: "Chef",
-    review:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, quos. repellant.",
-  },
-  {
-    avatar: "/reviews/avatar-1.png",
-    name: "Richard Thompson",
-    job: "Chef",
-    review:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, quos. repellant.",
+      " During his 3 month tenure, he demonstrated exceptional dedication playing a key role in various projects. His contributions have been highly valued, and we commend his hard work and commitment.",
+    company_link: "https://liaplus.com",
+    certificate_link:
+      "https://drive.google.com/file/d/1SDpKxBN498vZ7WhX5oIWuG_0Q2F8y7NH/view?usp=sharing",
   },
 ];
 
@@ -69,17 +54,22 @@ const Reviews = () => {
             640: { slidesPerView: 2 },
             1400: { slidesPerView: 3 },
           }}
-          spaceBetween={30}
+          spaceBetween={50}
           modules={[Pagination]}
           pagination={{ clickable: true }}
-          className="h-[350px]"
+          className="h-[450px]"
         >
           {reviewsData.map((person, index) => {
             return (
               <SwiperSlide key={index}>
-                <Card className="min-h-[300px] bg-tertiary p-8 dark:bg-secondary/40">
+                <Card className="min-h-[400px] bg-tertiary p-8 dark:bg-secondary/40">
                   <CardHeader className="mb-10 p-0">
-                    <div className="flex items-center gap-x-4">
+                    <a
+                      href={person.company_link}
+                      target="_blank"
+                      rel="noopener"
+                      className="flex items-center gap-x-4 transition-all hover:underline"
+                    >
                       {/* image */}
                       <Image
                         src={person.avatar}
@@ -87,16 +77,24 @@ const Reviews = () => {
                         height={70}
                         alt=""
                         priority
+                        className="rounded-full"
                       />
                       {/* name */}
                       <div className="flex flex-col">
                         <CardTitle>{person.name}</CardTitle>
                         <p>{person.job}</p>
                       </div>
-                    </div>
+                    </a>
                   </CardHeader>
-                  <CardDescription className="text-lg text-muted-foreground">
-                    {person.review}
+                  <CardDescription className="h-[200px] text-justify text-lg text-muted-foreground">
+                    <a
+                      href={person.certificate_link}
+                      target="_blank"
+                      rel="noopener"
+                      className="hover:text- flex items-center gap-x-4 transition-all"
+                    >
+                      {person.review}
+                    </a>
                   </CardDescription>
                 </Card>
               </SwiperSlide>
