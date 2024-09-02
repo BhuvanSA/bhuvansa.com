@@ -18,7 +18,8 @@ import ProjectCard from "@/components/ProjectCard";
 
 const projectData = [
   {
-    image: "/work/1.png",
+    // image: "/work/1.png",
+    image: "https://flaskfeedbackform.bhuvansa.com/static/images/OG.png",
     category: "Web App",
     name: "Flask Feedback Form",
     description: "A form to collect feedbacks for multiple teams!",
@@ -26,7 +27,7 @@ const projectData = [
     github: "https://github.com/BhuvanSA/flask-feedback-form",
   },
   {
-    image: "/work/2.png",
+    image: "https://ideathon.bhuvansa.com/assets/card-image.jpeg",
     category: "Web App",
     name: "Ideathon Landing Page",
     description: "A landing page for an Ideathon event!",

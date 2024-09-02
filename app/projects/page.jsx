@@ -5,15 +5,17 @@ import ProjectCard from "@/components/ProjectCard";
 
 const projectData = [
   {
-    image: "/work/1.png",
+    // image: "/work/1.png",
+    image: "https://flaskfeedbackform.bhuvansa.com/static/images/OG.png",
     category: ["Full-Stack", "Backend", "PostgreSQL"],
+    techStack: ["Flask", "SQLAlchemy", "PostgreSQL"],
     name: "Flask Feedback Form",
     description: "A form to collect feedbacks for multiple teams.",
     link: "https://flaskfeedbackform.bhuvansa.com",
     github: "https://github.com/BhuvanSA/flask-feedback-form",
   },
   {
-    image: "/work/2.png",
+    image: "https://ideathon.bhuvansa.com/assets/card-image.jpeg",
     category: ["Frontend", "Tailwind CSS"],
     name: "Ideathon Landing Page",
     description: "A landing page for an Ideathon event, hosted by my college.",
