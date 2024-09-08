@@ -13,7 +13,7 @@ const links = [
   { path: "/contact", name: "contact" },
 ];
 
-const Nav = ({ containerStyles, linkStyles, underlineStyles }) => {
+const Nav = ({ containerStyles, linkStyles, underlineStyles, onLinkClick }) => {
   const path = usePathname();
   return (
     <nav className={`${containerStyles}`}>
@@ -21,6 +21,7 @@ const Nav = ({ containerStyles, linkStyles, underlineStyles }) => {
         return (
           <Link
             href={link.path}
+            onClick={onLinkClick}
             key={index}
             className={`capitalize ${linkStyles}`}
           >
