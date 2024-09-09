@@ -1,4 +1,5 @@
 "use client";
+import { Loader2 } from "lucide-react";
 import { useState } from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
@@ -20,7 +21,13 @@ const Form = () => {
   return (
     <>
       {status <= 2 && (
-        <form className="flex flex-col gap-y-4" action={handleSubmit}>
+        <form
+          className="flex flex-col gap-y-4"
+          action={async (formData) => {
+            await setStatus(2);
+            handleSubmit(formData);
+          }}
+        >
           {/* input */}
           <div className="relative flex items-center">
             <Input
@@ -59,11 +66,11 @@ const Form = () => {
           )}
           {status === 2 && (
             <Button
-              type="submit"
+              disabled
               className="flex max-w-[166px] items-center gap-x-1"
             >
+              <Loader2 className="mr-2 h-4 w-4 animate-spin" />
               Sending...
-              <ArrowRightIcon size={20} className="ml-2" />
             </Button>
           )}
         </form>
