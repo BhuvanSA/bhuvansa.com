@@ -74,7 +74,7 @@ const Hero = () => {
               // endCountText="k"
               badgeText="Hackathons Won"
             />
-            <div className="bg-hero_shape2-light absolute -right-2 -top-1 h-[500px] w-[500px] bg-no-repeat dark:bg-hero_shape2_dark"></div>
+            <div className="absolute -right-2 -top-1 h-[500px] w-[500px] bg-hero_shape2_light bg-no-repeat dark:bg-hero_shape2_dark"></div>
             <DevImg
               containerStyles="bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom"
               imgSrc="/hero/developer.png"

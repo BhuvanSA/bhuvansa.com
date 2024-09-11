@@ -29,7 +29,7 @@ const ProjectCard = ({ project }) => {
             </Link>
             <Link
               href={project.github}
-              target_="_blank"
+              target="_blank"
               className="flex h-[54px] w-[54px] scale-0 items-center justify-center rounded-full bg-secondary opacity-0 transition-all duration-300 group-hover:scale-100 group-hover:opacity-100"
             >
               <Github className="text-white" />

@@ -51,7 +51,7 @@ const Work = () => {
           </Link>
         </div>
         {/* slider */}
-        <div className="xl: right-0 top-0 max-w-[1000px] xl:absolute">
+        <div className="right-0 top-0 xl:absolute xl:max-w-[1000px]">
           <Swiper
             className="h-[480px]"
             slidesPerView={1}

@@ -76,10 +76,12 @@ const Form = () => {
         </form>
       )}
       {status === 3 && (
-        <p className="text-green-500">Message sent successfully!</p>
+        <p className="text-green-500 xl:text-center">
+          Message sent successfully!
+        </p>
       )}
       {status === 4 && (
-        <p className="text-red-500">
+        <p className="text-center text-red-500">
           Failed to send the message. Please try again.
         </p>
       )}
