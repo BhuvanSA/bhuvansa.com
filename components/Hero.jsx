@@ -51,14 +51,14 @@ const Hero = () => {
           </div>
           {/* image */}
           <div className="relative hidden xl:flex">
-            {/* badge 1 */}
+            {/* internship badge */}
             <Badge
-              containerStyles="absolute top-[24%] -left-[5rem]"
+              containerStyles="absolute top-[24%] -left-[8.5rem]"
               icon={<RiBriefcase4Fill />}
               endCountNum={2}
               badgeText="Internships Completed"
             />
-            {/* badge 2 */}
+            {/* finsihed projects badge */}
             <Badge
               containerStyles="absolute top-[80%] -left-[1rem]"
               icon={<RiTodoFill />}
@@ -76,7 +76,7 @@ const Hero = () => {
             />
             <div className="absolute -right-2 -top-1 h-[500px] w-[500px] bg-hero_shape2_light bg-no-repeat dark:bg-hero_shape2_dark"></div>
             <DevImg
-              containerStyles="bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom"
+              containerStyles="bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative"
               imgSrc="/hero/developer.png"
             />
           </div>

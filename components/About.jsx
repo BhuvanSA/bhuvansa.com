@@ -29,7 +29,7 @@ const infoData = [
   },
   {
     icon: <Calendar size={20} />,
-    text: "Born on 22 April, 2003",
+    text: "21 Years Old",
   },
   {
     icon: <GraduationCap size={20} />,
@@ -40,7 +40,6 @@ const infoData = [
     text: "Bengaluru",
   },
 ];
-
 const qualificationData = [
   {
     title: "education",
@@ -148,8 +147,8 @@ const About = () => {
           {/* image */}
           <div className="relative hidden flex-1 xl:flex">
             <DevImg
-              containerStyles="bg_about_shape_light dark:bg-about_shape_dark w-[505px] h-[505px] bg-no-repeat relative"
-              imgSrc="/about/developer.png"
+              containerStyles="bg_about_shape_light dark:bg-about_shape_dark w-[505px] h-[505px] bg-no-repeat relative overflow-hidden"
+              imgSrc="/about/nobg.png"
             />
           </div>
           {/* tabs */}
@@ -174,14 +173,10 @@ const About = () => {
                 {/* personal */}
                 <TabsContent value="personal">
                   <div className="text-center xl:text-left">
-                    <h3 className="h3 mb-4">
-                      Unmatched Service Quality for Over 10 Years
-                    </h3>
+                    <h3 className="h3 mb-4">Bringing ideas to life</h3>
                     <p className="subtitle max-auto max-w-xl xl:mx-0">
                       {" "}
-                      I specialize in crafting intuitive websites with
-                      cutting-edge technology, delivering dynamic and engaging
-                      user experiences.
+                      A curious person, who wants to know how things work
                     </p>
                     {/* icons */}
                     <div className="mb-12 grid gap-4 xl:grid-cols-2">
