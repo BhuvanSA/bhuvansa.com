@@ -148,7 +148,7 @@ const About = () => {
           <div className="relative hidden flex-1 xl:flex">
             <DevImg
               containerStyles="bg_about_shape_light dark:bg-about_shape_dark w-[505px] h-[505px] bg-no-repeat relative overflow-hidden"
-              imgSrc="/about/nobg.png"
+              imgSrc="/about/developer.png"
             />
           </div>
           {/* tabs */}
