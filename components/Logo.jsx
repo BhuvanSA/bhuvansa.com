@@ -5,7 +5,7 @@ import Image from "next/image";
 const logo = ({ onLinkClick }) => {
   return (
     <Link href="/" onClick={onLinkClick}>
-      <Image src="newlogo.svg" width={54} height={54} priority alt="logo" />
+      <Image src="temp.svg" width={100} height={100} priority alt="logo" />
     </Link>
   );
 };

@@ -1,40 +1,17 @@
-"use client";
-import {
-  RiYoutubeFill,
-  RiLinkedinFill,
-  RiGithubFill,
-  RiTwitterXFill,
-} from "react-icons/ri";
-
-import Link from "next/link";
-
-const icons = [
-  {
-    path: "https://github.com/bhuvansa/",
-    name: <RiGithubFill />,
-  },
-  {
-    path: "https://x.com/bhuvan_s_a",
-    name: <RiTwitterXFill />,
-  },
-  {
-    path: "https://www.linkedin.com/in/bhuvansa/",
-    name: <RiLinkedinFill />,
-  },
-];
+import { IconsLinks } from "@/data/IconsLinks";
 
 const Socials = ({ containerStyles, iconsStyles }) => {
   return (
     <div className={`${containerStyles}`}>
-      {icons.map((icon, index) => {
+      {IconsLinks.map((iconlink, index) => {
         return (
           <a
-            href={icon.path}
+            href={iconlink.weblink}
             key={index}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <div className={`${iconsStyles}`}>{icon.name}</div>
+            <div className={`${iconsStyles}`}>{iconlink.iconlogo}</div>
           </a>
         );
       })}
