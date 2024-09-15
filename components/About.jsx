@@ -32,25 +32,25 @@ const About = () => {
             <Tabs defaultValue="Personal">
               <TabsList className="grid w-full dark:border-none xl:max-w-[600px] xl:grid-cols-4 xl:border">
                 <TabsTrigger
-                  className="w-[100px] xl:w-[150px]"
+                  className="w-full px-2 py-3 text-base sm:text-lg xl:w-[150px]"
                   value="Personal"
                 >
                   Personal Info
                 </TabsTrigger>
                 <TabsTrigger
-                  className="w-[100px] xl:w-[150px]"
+                  className="w-full px-2 py-3 text-base sm:text-lg xl:w-[150px]"
                   value="Experience"
                 >
                   Experience
                 </TabsTrigger>
                 <TabsTrigger
-                  className="w-[100px] xl:w-[150px]"
+                  className="w-full px-2 py-3 text-base sm:text-lg xl:w-[150px]"
                   value="Education"
                 >
                   Education
                 </TabsTrigger>
                 <TabsTrigger
-                  className="w-[100px] xl:w-[150px]"
+                  className="w-full px-2 py-3 text-base sm:text-lg xl:w-[150px]"
                   value="SkillsTools"
                 >
                   Skills & Tools
