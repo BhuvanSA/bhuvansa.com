@@ -37,7 +37,7 @@ const Hero = () => {
                   <Send size={18} />
                 </Button>
               </Link>
-              <a href="/hero/BhuvanSA.pdf" download>
+              <a href="/resume.pdf" download>
                 <Button variant="secondary" className="gap-x-2">
                   My Resume <Download size={18} />
                 </Button>

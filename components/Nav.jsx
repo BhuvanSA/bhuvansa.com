@@ -1,5 +1,6 @@
 // link (next js)
 import Link from "next/link";
+import { RiArrowRightUpLine } from "react-icons/ri";
 
 // framer motion
 import { motion } from "framer-motion";
@@ -38,6 +39,14 @@ const Nav = ({ containerStyles, linkStyles, underlineStyles, onLinkClick }) => {
           </Link>
         );
       })}
+      <Link
+        href="/resume.pdf"
+        target="_blank"
+        className={`${linkStyles} flex items-center capitalize`}
+      >
+        Resume
+        <RiArrowRightUpLine className="ml-1 flex animate-bounce text-primary dark:text-primary" />
+      </Link>
     </nav>
   );
 };
