@@ -22,6 +22,17 @@ const projectData = [
     link: "https://ideathon.bhuvansa.com",
     github: "https://github.com/BhuvanSA/ideathon-landingpage",
   },
+  {
+    image: "/work/hacksprinta2.png",
+    category: ["GenAI", "Streamlit", "LLM"],
+    name: "Dr.AIGuru",
+    description:
+      "1st Prize @Hacksprint, A medical chatbot using finetune llama2",
+    link: "https://hacksprinta2.streamlit.app/",
+    github: "https://github.com/BhuvanSA/hacksprint_a2",
+    linkedin:
+      "https://www.linkedin.com/posts/prajwal-p-patil-5a044525a_hacksprint-hackathon-24hourhackathon-ugcPost-7150137179174768640--pW-",
+  },
 ];
 
 // remove category duplicates
