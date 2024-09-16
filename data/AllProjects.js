@@ -18,7 +18,7 @@ export const AllProjects = [
         link: "https://flaskfeedbackform.bhuvansa.com",
         github: "https://github.com/BhuvanSA/flask-feedback-form",
         linkedin: null,
-        isLatest: true,
+        isLatest: false,
     },
     {
         name: "Ideathon Landing Page",
@@ -29,6 +29,19 @@ export const AllProjects = [
         link: "https://ideathon.bhuvansa.com",
         github: "https://github.com/BhuvanSA/ideathon-landingpage",
         linkedin: null,
+        isLatest: false,
+    },
+    {
+        name: "MultiAgent Sales Bot",
+        description:
+            "2nd Prize @Hack-A-League2.0, Multi-Agent tools to help company in sales tasks",
+        link: "https://hackaleague.streamlit.app/",
+        image: "https://storage.googleapis.com/s4a-prod-share-preview/default/st_app_screenshot_image/f71906f5-f762-4025-a75d-31332e0ed87a/Home_Page.png",
+        category: ["AI", "Full-Stack"],
+        techStack: ["Hackathon", "LLM", "MultiAgent", "RAG", "LangChain", "VectorDB"],
+        github: "https://github.com/BhuvanSA/HackALeague-2.0",
+        linkedin:
+            "https://www.linkedin.com/posts/bhuvansa_hackaleague2-multiagent-llm-activity-7160339708919582721-F3J-",
         isLatest: true,
     },
     {
@@ -36,7 +49,7 @@ export const AllProjects = [
         description:
             "1st Prize @Hacksprint, A medical chatbot using finetuned llama2",
         link: "https://hacksprinta2.streamlit.app/",
-        image: "/work/hacksprinta2.png",
+        image: "https://storage.googleapis.com/s4a-prod-share-preview/default/st_app_screenshot_image/1cdd1b9e-2d2b-422e-9e84-728d1286fdfc/Home_Page.png",
         category: ["AI", "Full-Stack"],
         techStack: ["Hackathon", "Streamlit", "LLM"],
         github: "https://github.com/BhuvanSA/hacksprint_a2",
@@ -69,7 +82,7 @@ export const AllProjects = [
     {
         name: "Degrees of Separation",
         description: "Determine the shortest connection between two actors within a given movie database",
-        image: "/work/CS50AI-rs.png",
+        image: "https://opengraph.githubassets.com/7d2b902be223f46720abf4548c1aafbc033ee43c44f916474c766c0c52c4120b/BhuvanSA/CS50AI-rs",
         category: ["AI", "Console"],
         techStack: ["Rust", "BFS", "Graph"],
         link: null,
