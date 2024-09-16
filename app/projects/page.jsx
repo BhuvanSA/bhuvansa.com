@@ -2,59 +2,14 @@
 import React, { useState } from "react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import ProjectCard from "@/components/ProjectCard";
-
-const projectData = [
-  {
-    // image: "/work/1.png",
-    image: "https://flaskfeedbackform.bhuvansa.com/static/images/OG.png",
-    category: ["Full-Stack", "Backend", "PostgreSQL"],
-    techStack: ["Flask", "SQLAlchemy", "PostgreSQL"],
-    name: "Flask Feedback Form",
-    description: "A form to collect feedbacks for multiple teams.",
-    link: "https://flaskfeedbackform.bhuvansa.com",
-    github: "https://github.com/BhuvanSA/flask-feedback-form",
-  },
-  {
-    image: "https://ideathon.bhuvansa.com/assets/card-image.jpeg",
-    category: ["Frontend", "Tailwind CSS"],
-    name: "Ideathon Landing Page",
-    description: "A landing page for an Ideathon event, hosted by my college.",
-    link: "https://ideathon.bhuvansa.com",
-    github: "https://github.com/BhuvanSA/ideathon-landingpage",
-  },
-  {
-    image: "/work/hacksprinta2.png",
-    category: ["GenAI", "Streamlit", "LLM"],
-    name: "Dr.AIGuru",
-    description:
-      "1st Prize @Hacksprint, A medical chatbot using finetune llama2",
-    link: "https://hacksprinta2.streamlit.app/",
-    github: "https://github.com/BhuvanSA/hacksprint_a2",
-    linkedin:
-      "https://www.linkedin.com/posts/prajwal-p-patil-5a044525a_hacksprint-hackathon-24hourhackathon-ugcPost-7150137179174768640--pW-",
-  },
-];
-
-// remove category duplicates
-const uniqueCategory = [
-  "all projects",
-  // ...new Set(projectData.map((item) => item.category.)),
-  ...new Set(projectData.map((item) => item.category).flat(1)),
-];
-// console.log(uniqueCategory);
+import { AllProjects, Categories } from "@/data/AllProjects";
 
 const Projects = () => {
-  const [categories, setCategories] = useState(uniqueCategory);
-  const [category, setCategory] = useState("all projects");
+  const [category, setCategory] = useState("All");
 
-  const filteredProjects = projectData.filter((project) => {
-    // if category is 'all projects' return all projects, else filter by category
-    // return category === "all projects"
-    //   ? project
-    //   : project.category === category;
-    return category === "all projects"
-      ? project
-      : project.category.includes(category);
+  const filteredProjects = AllProjects.filter((project) => {
+    // if category is 'All' return all projects, else filter by category
+    return category === "All" ? project : project.category.includes(category);
   });
 
   return (
@@ -66,7 +21,7 @@ const Projects = () => {
         {/* tabs */}
         <Tabs defaultValue={category} className="mb-24 xl:mb-48">
           <TabsList className="mx-auto mb-12 grid h-full w-full dark:border-none md:grid-cols-3 md:border lg:max-w-[640px]">
-            {categories.map((category, index) => {
+            {Categories.map((category, index) => {
               return (
                 <TabsTrigger
                   onClick={() => {

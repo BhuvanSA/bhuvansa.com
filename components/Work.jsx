@@ -16,25 +16,7 @@ import { Pagination } from "swiper/modules";
 // components
 import ProjectCard from "@/components/ProjectCard";
 
-const projectData = [
-  {
-    // image: "/work/1.png",
-    image: "https://flaskfeedbackform.bhuvansa.com/static/images/OG.png",
-    category: "Web App",
-    name: "Flask Feedback Form",
-    description: "A form to collect feedbacks for multiple teams!",
-    link: "https://flaskfeedbackform.bhuvansa.com",
-    github: "https://github.com/BhuvanSA/flask-feedback-form",
-  },
-  {
-    image: "https://ideathon.bhuvansa.com/assets/card-image.jpeg",
-    category: "Web App",
-    name: "Ideathon Landing Page",
-    description: "A landing page for an Ideathon event!",
-    link: "https://ideathon.bhuvansa.com",
-    github: "https://github.com/BhuvanSA/ideathon-landingpage",
-  },
-];
+import { AllProjects } from "@/data/AllProjects";
 
 const Work = () => {
   return (
@@ -64,14 +46,16 @@ const Work = () => {
             modules={[Pagination]}
             pagination={{ clickable: true }}
           >
-            {/* show only the first 4 projects for the slides */}
-            {projectData.slice(0, 4).map((project, index) => {
-              return (
-                <SwiperSlide key={index}>
-                  <ProjectCard project={project} />
-                </SwiperSlide>
-              );
-            })}
+            {/* Show only if the isLatest is true, in reverse order */}
+            {AllProjects.filter((project) => project.isLatest)
+              .reverse()
+              .map((project, index) => {
+                return (
+                  <SwiperSlide key={index}>
+                    <ProjectCard project={project} />
+                  </SwiperSlide>
+                );
+              })}
           </Swiper>
         </div>
       </div>
