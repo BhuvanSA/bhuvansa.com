@@ -1,19 +1,89 @@
-This repository contains the code for a portfolio website built using Next.js. The website showcases the developer's skills, experience, and projects. 
+# Bhuvan S A - Portfolio Website
 
-## Inputs
+This repository contains the code for my personal portfolio website built using Next.js. The website showcases my skills, experience, and projects.
 
-- **Personal Information:** The website uses data from `data/AboutMeBasicInfo.js` to display the developer's name, age, email, education, and location.
-- **Work Experience:** The `data/WorkExperience.js` file provides details about the developer's work experience, including company names, roles, descriptions, and time periods.
-- **Education:**  The `data/Education.js` file contains information about the developer's educational background, such as institutions, courses, and time periods.
-- **Skills & Tools:** The `data/SkillsTools.js` file lists the developer's skills and the tools they use.
-- **Projects:** The `data/AllProjects.js` file provides details about the developer's projects, including names, descriptions, images, categories, tech stacks, links, and Github repositories.
-- **Social Media Profiles:** The `data/SocialMediaProfiles.js` file stores links to the developer's social media profiles.
+## Table of Contents
 
-## Outputs
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Project Structure](#project-structure)
+- [Contributing](#contributing)
 
-- **Portfolio Website:** The website presents a well-structured portfolio that includes sections for the developer's personal information, experience, education, skills and tools, projects, and a contact form.
-- **Contact Form:** The website has a contact form that allows visitors to send messages to the developer, with functionality to send emails to both the recipient and the developer.
-- **Visual Appeal:**  The website is designed using Tailwind CSS for visual consistency and responsiveness.
-- **Animations:** Animations are used to enhance the user experience and create a more engaging presentation.
-- **SEO Optimization:** The website incorporates SEO best practices for improved search engine visibility.
-- **Performance:**  The website is optimized for performance, leveraging features like Next.js's built-in caching mechanisms and image optimization.
+## Features
+
+- Responsive design for various screen sizes
+- Dark mode support
+- Dynamic project showcase with filtering capabilities
+- Interactive sections for About, Work Experience, Education, and Skills
+- Contact form for easy communication
+- SEO optimized
+- Performance optimized with Next.js features
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org/) - React framework for server-side rendering and static site generation
+- [React](https://reactjs.org/) - JavaScript library for building user interfaces
+- [Tailwind CSS](https://tailwindcss.com/) - Utility-first CSS framework
+- [Framer Motion](https://www.framer.com/motion/) - Animation library for React
+- [Swiper](https://swiperjs.com/) - Modern mobile touch slider
+- [Radix UI](https://www.radix-ui.com/) - Unstyled, accessible components for React
+- [Lucide React](https://lucide.dev/) - Beautiful & consistent icon toolkit
+- [React Icons](https://react-icons.github.io/react-icons/) - Popular icon packs as React components
+- [Nodemailer](https://nodemailer.com/) - Module for email sending
+
+## Installation
+
+1. Clone the repository:
+
+   ```
+   git clone https://github.com/BhuvanSA/bhuvansa.com.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```
+   cd bhuvansa.com/
+   ```
+
+3. Install the dependencies:
+
+   ```
+   npm install
+   ```
+
+4. Create a `.env` file in the root directory and add the necessary environment variables (e.g., for email functionality).
+
+## Usage
+
+1. To run the development server:
+
+   ```
+   npm run dev
+   ```
+
+2. Open [http://localhost:3000](http://localhost:3000) in your browser to view the website.
+
+3. To build the project for production:
+
+   ```
+   npm run build
+   ```
+
+4. To start the production server:
+   ```
+   npm start
+   ```
+
+## Project Structure
+
+- `app/`: Contains the main application pages and layouts
+- `components/`: Reusable React components
+- `data/`: JSON files containing personal information, projects, and other data
+- `public/`: Static assets like images and fonts
+- `styles/`: Global CSS styles
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
