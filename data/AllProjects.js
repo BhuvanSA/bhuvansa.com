@@ -9,6 +9,28 @@ export const Categories = [
 
 export const AllProjects = [
     {
+        name: "VTU Fest Registration",
+        description: "A full-stack web application to manage event registrations for VTU Fest 2024.",
+        image: "https://raw.githubusercontent.com/BhuvanSA/vtufest/bhuvansa/public/demo/FileUpload.png",
+        category: ["Full-Stack"],
+        techStack: ["Next.js", "JWT", "PostgreSQL", "Prisma"],
+        link: "https://vtufest.vercel.app",
+        github: "https://github.com/BhuvanSA/vtufest",
+        linkedin: null,
+        isLatest: true,
+    },
+    {
+        name: "Google Sheets Dashboard",
+        description: "A dashboard to visualize and analyze data from Google Sheets.",
+        image: "https://raw.githubusercontent.com/BhuvanSA/revoeAI/refs/heads/main/frontend/public/dashboard-preview.png",
+        link: "https://revoe-ai-iota.vercel.app/",
+        github: "https://github.com/BhuvanSA/revoeAI",
+        category: ["Full-Stack"],
+        techStack: ["Web-Sockets", "ShadCN", "MongoDB"],
+        linkedin: null,
+        isLatest: true,
+    },
+    {
         // image: "/work/1.png",
         name: "Flask Feedback Form",
         description: "A form to collect feedbacks for multiple teams.",
@@ -42,7 +64,7 @@ export const AllProjects = [
         github: "https://github.com/BhuvanSA/HackALeague-2.0",
         linkedin:
             "https://www.linkedin.com/posts/bhuvansa_hackaleague2-multiagent-llm-activity-7160339708919582721-F3J-",
-        isLatest: true,
+        isLatest: false,
     },
     {
         name: "Dr.AIGuru",
@@ -55,7 +77,7 @@ export const AllProjects = [
         github: "https://github.com/BhuvanSA/hacksprint_a2",
         linkedin:
             "https://www.linkedin.com/posts/prajwal-p-patil-5a044525a_hacksprint-hackathon-24hourhackathon-ugcPost-7150137179174768640--pW-",
-        isLatest: true,
+        isLatest: false,
     },
     {
         name: "Object Detection in Browser",
@@ -66,7 +88,7 @@ export const AllProjects = [
         link: "https://objdect.bhuvansa.com",
         github: "https://github.com/BhuvanSA/objectDetection_tfjs",
         linkedin: null,
-        isLatest: true,
+        isLatest: false,
     },
     {
         name: "Whatsapp Marks Sending Bot",
