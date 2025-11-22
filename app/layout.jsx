@@ -1,12 +1,13 @@
-import "./globals.css";
-import { Outfit } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
+import { Outfit } from "next/font/google";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import "./globals.css";
 
 // components
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import AiAgent from "@/components/AiAgent";
 
 const outfit = Outfit({ subsets: ["latin"] });
 
@@ -22,6 +23,7 @@ export default function RootLayout({ children }) {
         <ThemeProvider attribute="class" defaultTheme="light">
           <Header />
           {children}
+          <AiAgent />
           <Analytics />
           <SpeedInsights />
           <Footer />

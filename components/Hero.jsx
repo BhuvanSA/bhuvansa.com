@@ -5,7 +5,6 @@ import { Download, Send } from "lucide-react";
 import {
   RiTeamFill,
   RiTodoFill,
-  RiArrowDownSLine,
   RiBriefcase4Fill,
 } from "react-icons/ri";
 
@@ -80,10 +79,6 @@ const Hero = () => {
               imgSrc="/hero/developer.png"
             />
           </div>
-        </div>
-        {/* icon */}
-        <div className="absolute bottom-44 left-2/4 hidden animate-bounce md:flex xl:bottom-12">
-          <RiArrowDownSLine className="text-3xl text-primary" />
         </div>
       </div>
     </section>

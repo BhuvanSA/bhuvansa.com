@@ -10,9 +10,6 @@ import { SkillsTools } from "@/data/SkillsTools";
 import { Briefcase, GraduationCap } from "lucide-react";
 
 const About = () => {
-  const getData = (arr, title) => {
-    return arr.find((item) => item.title === title);
-  };
   return (
     <section className="pb-12 xl:h-[860px] xl:py-24">
       <div className="container mx-auto">
