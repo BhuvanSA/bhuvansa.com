@@ -55,7 +55,7 @@ const Form = () => {
             <MessageSquare size={20} className="absolute right-6 top-4" />
           </div>
 
-                    <Turnstile
+          <Turnstile
             sitekey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || "1x00000000000000000000AA"}
             responseField={true}
             responseFieldName="turnstileToken"
