@@ -1,41 +1,33 @@
 "use client";
 import { Loader2 } from "lucide-react";
-import { useState } from "react";
+import { useActionState } from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import { User, MailIcon, ArrowRightIcon, MessageSquare } from "lucide-react";
-import { sendMail } from "@/lib/mail";
+import { submitContactForm } from "@/app/actions";
+import Turnstile from "react-turnstile";
 
 const Form = () => {
-  const [status, setStatus] = useState(1);
-  async function handleSubmit(formData) {
-    setStatus(2);
-    try {
-      await sendMail(formData);
-      setStatus(3);
-    } catch (error) {
-      setStatus(4);
-    }
-  }
+  const [state, action, pending] = useActionState(submitContactForm, null);
+
+  const isSuccess = state?.message === "success";
+  const isError = state?.message === "error";
+
   return (
     <>
-      {status <= 2 && (
-        <form
-          className="flex flex-col gap-y-4"
-          action={async (formData) => {
-            await setStatus(2);
-            handleSubmit(formData);
-          }}
-        >
+      {!isSuccess && (
+        <form action={action} className="flex flex-col gap-y-4">
           {/* input */}
           <div className="relative flex items-center">
             <Input
-              type="name"
+              type="text"
               id="name"
               name="name"
               placeholder="Name"
               required
+              autoComplete="name"
+              aria-label="Name"
             />
             <User size={20} className="absolute right-6" />
           </div>
@@ -47,15 +39,32 @@ const Form = () => {
               name="email"
               placeholder="Email"
               required
+              autoComplete="email"
+              aria-label="Email"
             />
             <MailIcon size={20} className="absolute right-6" />
           </div>
           {/* textarea */}
           <div className="relative flex items-center">
-            <Textarea placeholder="Type Your Message" name="message" required />
+            <Textarea
+              placeholder="Type Your Message"
+              name="message"
+              required
+              aria-label="Message"
+            />
             <MessageSquare size={20} className="absolute right-6 top-4" />
           </div>
-          {status === 1 && (
+
+                    <Turnstile
+            sitekey={process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || "1x00000000000000000000AA"}
+            responseField={true}
+            responseFieldName="turnstileToken"
+            fixedSize={true}
+            refreshExpired="auto"
+            theme="auto"
+          />
+          
+          {!pending && (
             <Button
               type="submit"
               className="flex max-w-[166px] items-center gap-x-1"
@@ -64,7 +73,7 @@ const Form = () => {
               <ArrowRightIcon size={20} className="ml-2" />
             </Button>
           )}
-          {status === 2 && (
+          {pending && (
             <Button
               disabled
               className="flex max-w-[166px] items-center gap-x-1"
@@ -75,15 +84,22 @@ const Form = () => {
           )}
         </form>
       )}
-      {status === 3 && (
+      {isSuccess && (
         <p className="text-green-500 xl:text-center">
-          Message sent successfully!
+          Message sent successfully! We will get back to you soon.
         </p>
       )}
-      {status === 4 && (
-        <p className="text-center text-red-500">
-          Failed to send the message. Please try again.
-        </p>
+      {isError && (
+        <div className="text-center">
+          <p className="text-red-500 font-semibold">
+            Failed to send the message.
+          </p>
+          {state?.error && (
+            <p className="text-red-400 text-sm mt-1">
+              {state.error}
+            </p>
+          )}
+        </div>
       )}
     </>
   );
