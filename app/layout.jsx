@@ -11,8 +11,9 @@ import { ThemeProvider } from "@/components/ThemeProvider";
 const outfit = Outfit({ subsets: ["latin"] });
 
 export const metadata = {
-	title: "Bhuvan S A",
-	description: "Portfolio of Bhuvan S A",
+	title: "Bhuvan S A — AI Engineer & Full-Stack Developer",
+	description:
+		"AI-native full-stack engineer building production agentic systems, RAG pipelines, and multi-tenant LLM platforms.",
 };
 
 export default function RootLayout({ children }) {

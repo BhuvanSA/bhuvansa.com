@@ -9,6 +9,8 @@ import { Badge } from "./ui/badge";
 import { Card, CardHeader } from "./ui/card";
 
 const ProjectCard = ({ project }) => {
+  const primaryLink = project.link || project.github || project.linkedin;
+
   return (
     <Card className="group relative overflow-hidden">
       <CardHeader className="p-0">
@@ -23,11 +25,12 @@ const ProjectCard = ({ project }) => {
             priority
           />
           {/* btn links */}
-          <div className="flex gap-4">
+          <div className="relative z-20 flex gap-4">
             {project.linkedin != null ? (
               <Link
                 href={project.linkedin}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="flex h-[54px] w-[54px] scale-0 items-center justify-center rounded-full bg-secondary opacity-0 transition-all duration-300 group-hover:scale-100 group-hover:opacity-100"
               >
                 <Linkedin className="text-white" />
@@ -39,6 +42,7 @@ const ProjectCard = ({ project }) => {
               <Link
                 href={project.link}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="flex h-[54px] w-[54px] scale-0 items-center justify-center rounded-full bg-secondary opacity-0 transition-all duration-300 group-hover:scale-100 group-hover:opacity-100"
               >
                 <Link2Icon className="text-white" />
@@ -50,6 +54,7 @@ const ProjectCard = ({ project }) => {
               <Link
                 href={project.github}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="flex h-[54px] w-[54px] scale-0 items-center justify-center rounded-full bg-secondary opacity-0 transition-all duration-300 group-hover:scale-100 group-hover:opacity-100"
               >
                 <Github className="text-white" />
@@ -76,6 +81,16 @@ const ProjectCard = ({ project }) => {
         <h4 className="h4 mb-1">{project.name}</h4>
         <p className="text-lg text-muted-foreground">{project.description}</p>
       </div>
+      {/* whole-card click target — primary link opens in new tab */}
+      {primaryLink ? (
+        <Link
+          href={primaryLink}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Open ${project.name}`}
+          className="absolute inset-0 z-10"
+        />
+      ) : null}
     </Card>
   );
 };

@@ -56,24 +56,37 @@ export const AllProjects = [
     {
         name: "MultiAgent Sales Bot",
         description:
-            "2nd Prize @Hack-A-League2.0, Multi-Agent tools to help company in sales tasks",
+            "National Hackathon Winner @Hack-A-League — multi-agent system using crewAI with shared context and hand-off logic for sales conversations.",
         link: "https://hackaleague.streamlit.app/",
         image: "https://storage.googleapis.com/s4a-prod-share-preview/default/st_app_screenshot_image/f71906f5-f762-4025-a75d-31332e0ed87a/Home_Page.png",
         category: ["AI", "Full-Stack"],
-        techStack: ["Hackathon", "LLM", "MultiAgent", "RAG", "LangChain", "VectorDB"],
+        techStack: ["Hackathon", "LLM", "MultiAgent", "crewAI", "RAG", "VectorDB"],
         github: "https://github.com/BhuvanSA/HackALeague-2.0",
         linkedin:
             "https://www.linkedin.com/posts/bhuvansa_hackaleague2-multiagent-llm-activity-7160339708919582721-F3J-",
         isLatest: false,
     },
     {
+        name: "BrainOVision — Chat with PDF (RAG)",
+        description:
+            "Hackathon Winner @BrainOVision — built a complete RAG pipeline from scratch (no LangChain): PDF parsing, chunking, embeddings, vector search, and context-augmented LLM responses.",
+        link: null,
+        image: "https://opengraph.githubassets.com/1/BhuvanSA/brainovision",
+        category: ["AI", "Full-Stack"],
+        techStack: ["Hackathon", "RAG", "Embeddings", "VectorDB", "LLM", "Python"],
+        github: null,
+        linkedin:
+            "https://www.linkedin.com/posts/activity-7160239318727323650-P-55",
+        isLatest: false,
+    },
+    {
         name: "Dr.AIGuru",
         description:
-            "1st Prize @Hacksprint, A medical chatbot using finetuned llama2",
+            "National Hackathon Winner @Hacksprint — privacy-first medical chatbot with locally hosted Llama 2 (Ollama) and concurrent request queuing on a single laptop GPU.",
         link: "https://hacksprinta2.streamlit.app/",
         image: "https://storage.googleapis.com/s4a-prod-share-preview/default/st_app_screenshot_image/1cdd1b9e-2d2b-422e-9e84-728d1286fdfc/Home_Page.png",
         category: ["AI", "Full-Stack"],
-        techStack: ["Hackathon", "Streamlit", "LLM"],
+        techStack: ["Hackathon", "Llama 2", "Ollama", "Local LLM", "Python"],
         github: "https://github.com/BhuvanSA/hacksprint_a2",
         linkedin:
             "https://www.linkedin.com/posts/prajwal-p-patil-5a044525a_hacksprint-hackathon-24hourhackathon-ugcPost-7150137179174768640--pW-",
