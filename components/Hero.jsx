@@ -27,7 +27,7 @@ const Hero = () => {
             </div>
             <h1 className="h1">Hello, I'm Bhuvan</h1>
             <p className="subtitle mx-auto max-w-[490px] xl:mx-0">
-              Nice to meet you
+              I build agentic systems, RAG pipelines, and production LLM platforms — end-to-end.
             </p>
             {/* buttons */}
             <div className="mx-auto mb-12 flex flex-col gap-x-3 gap-y-3 md:flex-row xl:mx-0">
@@ -51,18 +51,18 @@ const Hero = () => {
           </div>
           {/* image */}
           <div className="relative hidden xl:flex">
-            {/* internship badge */}
+            {/* companies badge */}
             <Badge
               containerStyles="absolute top-[24%] -left-[8.5rem]"
               icon={<RiBriefcase4Fill />}
-              endCountNum={2}
-              badgeText="Internships Completed"
+              endCountNum={4}
+              badgeText="Companies Worked With"
             />
             {/* finsihed projects badge */}
             <Badge
               containerStyles="absolute top-[80%] -left-[1rem]"
               icon={<RiTodoFill />}
-              endCountNum={6}
+              endCountNum={8}
               // endCountText="k"
               badgeText="Finished Projects"
             />
@@ -70,7 +70,7 @@ const Hero = () => {
             <Badge
               containerStyles="absolute top-[55%] -right-10"
               icon={<RiTeamFill />}
-              endCountNum={4}
+              endCountNum={3}
               // endCountText="k"
               badgeText="Hackathons Won"
             />

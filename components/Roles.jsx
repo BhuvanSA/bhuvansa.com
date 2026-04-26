@@ -25,10 +25,10 @@ const Roles = () => {
       ]}
     >
       <CarouselContent>
-        <CarouselItem>FullStack Developer</CarouselItem>
-        <CarouselItem>Data Analyst</CarouselItem>
+        <CarouselItem>AI Engineer</CarouselItem>
+        <CarouselItem>Full-Stack Developer</CarouselItem>
+        <CarouselItem>Agentic AI Engineer</CarouselItem>
         <CarouselItem>ML Engineer</CarouselItem>
-        <CarouselItem>AI Researcher</CarouselItem>
       </CarouselContent>
     </Carousel>
   );
