@@ -1,5 +1,6 @@
 // icons
-import { SiGithub, SiLeetcode, SiLinkedin, SiX } from "react-icons/si";
+import { SiGithub, SiLeetcode, SiX } from "react-icons/si";
+import { FaLinkedin } from "react-icons/fa";
 
 // data
 import { SocialMediaProfiles } from "./SocialMediaProfiles";
@@ -11,7 +12,7 @@ export const IconsLinks = [
     },
     {
         weblink: SocialMediaProfiles.linkedin,
-        iconlogo: <SiLinkedin />,
+        iconlogo: <FaLinkedin />,
     },
     {
         weblink: SocialMediaProfiles.leetcode,
